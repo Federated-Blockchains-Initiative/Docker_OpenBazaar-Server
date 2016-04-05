@@ -1,8 +1,11 @@
 # Docker_OpenBazaar-Server
 Dockerfile for the openbazaar server
 
+# Pull image form docker hub 
 
-# How to use this ?
+docker run --env "USERNAME=toto" --env "PASSWORD=tata" -p 18469:18469 -p 18466:18466 -p 18470:18470 sbres/openbazaar-server
+
+# Build from source
 
 1. git clone and go to repo
 
@@ -14,7 +17,7 @@ Dockerfile for the openbazaar server
 
 3. Run Docker container
 
-  docker run --env "USERNAME=toto" --env "PASSWORD=tata" -it -p 18469:18469 -p 18466:18466 -p 18470:18470 openbazar
+  docker run --env "USERNAME=toto" --env "PASSWORD=tata" -p 18469:18469 -p 18466:18466 -p 18470:18470 openbazar
 
 4. connect the openbazaar to the client using the IP of your VPS, the USERNAME and the PASSWORD you set when lauching the container.
 
